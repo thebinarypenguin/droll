@@ -1,22 +1,36 @@
 {
-  "name"        : "droll",
-  "version"     : "0.0.1",
-  "description" : "A dice rolling library that uses standard dice notation",
-  "keywords"    : ["die", "dice", "dice notation", "roll", "random", "rpg", "game"],
-  "author"      : "Ethan Zimmerman <thebinarypenguin@gmail.com> (http://thebinarypenguin.com)",
-  "repository"  : {
-                    "type" : "git",
-                    "url"  : "http://github.com/thebinarypenguin/droll"
-                  },
-  "bugs"        : "http://github.com/thebinarypenguin/droll/issues",
-  "licenses"    : [
-                    {
-                      "type" : "MIT",
-                      "url"  : "http://raw.github.com/thebinarypenguin/droll/master/LICENSE"
-                    }
-                  ],
-  "private"     : true
+  "name"            : "droll",
+  "version"         : "0.0.1",
+  "description"     : "A dice rolling library that uses standard dice notation",
+  "keywords"        : ["die", "dice", "dice notation", "roll", "random", "rpg", "game"],
+  "author"          : "Ethan Zimmerman <thebinarypenguin@gmail.com> (http://thebinarypenguin.com)",
+  "repository"      : {
+                        "type" : "git",
+                        "url"  : "http://github.com/thebinarypenguin/droll"
+                      },
+  "bugs"            : "http://github.com/thebinarypenguin/droll/issues",
+  "licenses"        : [
+                        {
+                          "type" : "MIT",
+                          "url"  : "http://raw.github.com/thebinarypenguin/droll/master/LICENSE"
+                        }
+                      ],
+  "bin"             : {
+                        "droll" : "./bin/droll-cli.js"
+                      },
+  "devDependencies" : {
+                        "mocha" : "1.14.x",
+                        "should": "2.1.x"
+                      },
+  "private"         : true
 }
+
+
+
+
+
+
+
 
 
 
