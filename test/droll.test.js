@@ -19,7 +19,7 @@ describe('droll#parse(formula)', function() {
   });
 
   it('should be case insensitive', function() {
-    droll.validate('d4').should.not.be.false;
+    droll.validate('D4').should.not.be.false;
   });
 });
 
