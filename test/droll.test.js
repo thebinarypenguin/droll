@@ -1,5 +1,5 @@
 var should = require('should')
-  , droll  = require('../lib/droll');
+  , droll  = require('../droll');
 
 
 describe('droll#parse(formula)', function() {

@@ -8,7 +8,7 @@
     this.rolls    = [];
     this.modifier = 0;
     this.total    = 0;
-  };
+  }
 
   /**
    * Returns a string representation of the roll result

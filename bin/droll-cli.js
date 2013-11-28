@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var droll = require('../lib/droll');
+var droll = require('../droll');
 
 if (process.argv[2] === undefined) {
   console.error('Missing Formula');
