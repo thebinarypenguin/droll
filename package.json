@@ -15,6 +15,7 @@
                           "url"  : "http://raw.github.com/thebinarypenguin/droll/master/LICENSE"
                         }
                       ],
+  "main"            : "droll.js",
   "bin"             : {
                         "droll" : "./bin/droll-cli.js"
                       },
