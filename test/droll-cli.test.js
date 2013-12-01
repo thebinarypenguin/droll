@@ -1,5 +1,7 @@
-var should        = require('should')
-  , child_process = require('child_process');
+/*jshint expr: true*/
+
+var should        = require('should'),
+    child_process = require('child_process');
 
 describe('droll-cli <formula>', function() {
 

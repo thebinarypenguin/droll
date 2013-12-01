@@ -1,5 +1,7 @@
-var should = require('should')
-  , droll  = require('../droll');
+/*jshint expr: true*/
+
+var should = require('should'),
+    droll  = require('../droll');
 
 
 describe('droll#parse(formula)', function() {
