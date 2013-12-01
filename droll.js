@@ -3,6 +3,13 @@
   var root  = this;
   var droll = {};
 
+  // Define a "class" to represent a formula
+  function DrollFormula() {
+    this.numDice  = 0;
+    this.numSides = 0;
+    this.modifier = 0;
+  }
+
   // Define a "class" to represent the results of the roll
   function DrollResult() {
     this.rolls    = [];
@@ -41,11 +48,11 @@
 
   /**
    * Parse the formula into its component pieces.
-   * Returns an object on success or false on failure.
+   * Returns a DrollFormula object on success or false on failure.
    */
   droll.parse = function(formula) {
     var pieces = null;
-    var result = {};
+    var result = new DrollFormula();
 
     pieces = formula.match(/^([1-9]\d*)?d([1-9]\d*)([+-]\d+)?$/i);
     if (!pieces) { return false; }
