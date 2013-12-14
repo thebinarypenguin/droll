@@ -20,8 +20,12 @@
                         "droll" : "./bin/droll-cli.js"
                       },
   "devDependencies" : {
-                        "mocha" : "1.14.x",
-                        "should": "2.1.x"
+                        "mocha"                : "1.14.x",
+                        "should"               : "2.1.x",
+                        "grunt"                : "0.4.x",
+                        "grunt-contrib-jshint" : "0.7.x",
+                        "grunt-contrib-uglify" : "0.2.x",
+                        "grunt-mocha-cli"      : "1.4.x"
                       },
   "private"         : false
 }
