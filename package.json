@@ -1,6 +1,6 @@
 {
   "name"            : "droll",
-  "version"         : "0.0.1",
+  "version"         : "0.0.2",
   "description"     : "A dice rolling library that uses standard dice notation",
   "keywords"        : ["die", "dice", "dice notation", "roll", "random", "rpg", "game"],
   "author"          : "Ethan Zimmerman <thebinarypenguin@gmail.com> (http://thebinarypenguin.com)",
