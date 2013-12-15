@@ -6,6 +6,7 @@ and browser environments.
 
 An optional executable is also included in the package for use directly from the command line.
 
+[![Build Status](https://travis-ci.org/thebinarypenguin/droll.png?branch=master)](https://travis-ci.org/thebinarypenguin/droll)
 
 # Installation
 
