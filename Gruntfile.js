@@ -35,6 +35,13 @@ module.exports = function(grunt) {
         commitFiles: ['-a'],
         pushTo: 'origin'
       }
+    },
+
+    // Publish
+    shell: {
+      publish: {
+        command : "npm publish"
+      }
     }
   });
 
@@ -42,6 +49,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-mocha-cli');
   grunt.loadNpmTasks('grunt-bump');
+  grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('default', ['jshint', 'mochacli']);
   grunt.registerTask('lint',    ['jshint']);
@@ -52,6 +60,6 @@ module.exports = function(grunt) {
     if (!target) {
       target = "patch";
     }
-    return grunt.task.run("bump-only:" + target, "uglify", "bump-commit");
+    return grunt.task.run("bump-only:" + target, "uglify", "bump-commit", "shell:publish");
   });
 };
