@@ -25,7 +25,8 @@
                         "grunt"                : "0.4.x",
                         "grunt-contrib-jshint" : "0.7.x",
                         "grunt-contrib-uglify" : "0.2.x",
-                        "grunt-mocha-cli"      : "1.4.x"
+                        "grunt-mocha-cli"      : "1.4.x",
+                        "grunt-bump"           : "0.0.x"
                       },
   "private"         : false
 }
