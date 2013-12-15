@@ -53,7 +53,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jshint', 'mochacli']);
   grunt.registerTask('lint',    ['jshint']);
-  grunt.registerTask('minify',  ['uglify']);
   grunt.registerTask('test',    ['mochacli']);
 
   grunt.registerTask("release", "Release a new version, push it and publish it", function(target) {
