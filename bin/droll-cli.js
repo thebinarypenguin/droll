@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+"use strict";
+
 var droll = require('../droll');
 
 if (process.argv[2] === undefined) {
