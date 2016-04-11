@@ -1,8 +1,7 @@
-(function() {
+(function(root) {
 
    "use strict";
 
-  var root  = this;
   var droll = {};
 
   // Define a "class" to represent a formula
@@ -106,4 +105,4 @@
     root.droll = droll;
   }
 
-}());
+}(this));
