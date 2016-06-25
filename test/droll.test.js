@@ -9,11 +9,22 @@ describe('droll#parse(formula)', function() {
   it('should return a correctly-formatted object when given a valid formula', function() {
     var result = droll.parse('3d6+1');
 
-    result.should.have.properties('numDice', 'numSides', 'modifier');
+    result.should.have.properties('numDice', 'numSides', 'modifier', 'average');
 
     result.numDice.should.equal(3);
     result.numSides.should.equal(6);
     result.modifier.should.equal(1);
+  });
+
+  it('should calculate and store the average roll for the formula', function() {
+    var result1 = droll.parse('2d6+4');
+    var result2 = droll.parse('1d6');
+    var result3 = droll.parse('19d12+133');
+    var result4 = droll.parse('1d4-1');
+    result1.average.should.equal(11);
+    result2.average.should.equal(3.5);
+    result3.average.should.equal(256.5);
+    result4.average.should.equal(1.5);
   });
 
   it('should return false when given an invalid formula', function() {

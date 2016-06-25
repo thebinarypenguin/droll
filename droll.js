@@ -9,6 +9,7 @@
     this.numDice  = 0;
     this.numSides = 0;
     this.modifier = 0;
+    this.average  = 0;
   }
 
   // Define a "class" to represent the results of the roll
@@ -61,6 +62,7 @@
     result.numDice  = (pieces[1] - 0) || 1;
     result.numSides = (pieces[2] - 0);
     result.modifier = (pieces[3] - 0) || 0;
+    result.average  = (((result.numSides + 1) / 2) * result.numDice) + result.modifier;
 
     return result;
   };
