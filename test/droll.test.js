@@ -9,11 +9,21 @@ describe('droll#parse(formula)', function() {
   it('should return a correctly-formatted object when given a valid formula', function() {
     var result = droll.parse('3d6+1');
 
-    result.should.have.properties('numDice', 'numSides', 'modifier');
+    result.should.have.properties(
+      'numDice',
+      'numSides',
+      'modifier',
+      'minResult',
+      'maxResult',
+      'avgResult'
+    );
 
     result.numDice.should.equal(3);
     result.numSides.should.equal(6);
     result.modifier.should.equal(1);
+    result.minResult.should.equal(4);
+    result.maxResult.should.equal(19);
+    result.avgResult.should.equal(7.5);
   });
 
   it('should return false when given an invalid formula', function() {

@@ -6,9 +6,13 @@
 
   // Define a "class" to represent a formula
   function DrollFormula() {
-    this.numDice  = 0;
-    this.numSides = 0;
-    this.modifier = 0;
+    this.numDice   = 0;
+    this.numSides  = 0;
+    this.modifier  = 0;
+    
+    this.minResult = 0;
+    this.maxResult = 0;
+    this.avgResult = 0;
   }
 
   // Define a "class" to represent the results of the roll
@@ -61,6 +65,10 @@
     result.numDice  = (pieces[1] - 0) || 1;
     result.numSides = (pieces[2] - 0);
     result.modifier = (pieces[3] - 0) || 0;
+
+    result.minResult = (result.numDice * 1) + result.modifier;
+    result.maxResult = (result.numDice * result.numSides) + result.modifier;
+    result.avgResult = (result.maxResult - result.minResult) / 2;
 
     return result;
   };

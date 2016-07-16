@@ -101,3 +101,6 @@ The `DrollFormula` object contains the following properties
 * __numDice__ `Number` The number of dice to roll.
 * __numSides__ `Number` The number of sides on each die.
 * __modifier__ `Number` The optional modifier. The default is 0.
+* __minResult__ `Number` The minimum result that can be returned by this formula.
+* __maxResult__ `Number` The maximum result that can be returned by this formula.
+* __avgResult__ `Number` The average result returned by this formula. ((max - min) / 2)
