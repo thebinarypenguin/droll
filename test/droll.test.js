@@ -23,7 +23,7 @@ describe('droll#parse(formula)', function() {
     result.modifier.should.equal(1);
     result.minResult.should.equal(4);
     result.maxResult.should.equal(19);
-    result.avgResult.should.equal(7.5);
+    result.avgResult.should.equal(11.5);
   });
 
   it('should return false when given an invalid formula', function() {

@@ -68,7 +68,7 @@
 
     result.minResult = (result.numDice * 1) + result.modifier;
     result.maxResult = (result.numDice * result.numSides) + result.modifier;
-    result.avgResult = (result.maxResult - result.minResult) / 2;
+    result.avgResult = (result.maxResult + result.minResult) / 2;
 
     return result;
   };
