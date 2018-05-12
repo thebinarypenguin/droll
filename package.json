@@ -22,6 +22,9 @@
   "scripts"         : {
                         "test" : "grunt --verbose"
                       },
+  "dependencies":     {
+                        "random-js": "^1.0.8"
+                      },
   "devDependencies" : {
                         "mocha"                : "1.14.x",
                         "should"               : "2.1.x",

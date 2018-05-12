@@ -3,13 +3,17 @@
    "use strict";
 
   var droll = {};
+  var Random = require("random-js");
+  var engine = Random.engines.mt19937().autoSeed();
+
+
 
   // Define a "class" to represent a formula
   function DrollFormula() {
     this.numDice   = 0;
     this.numSides  = 0;
     this.modifier  = 0;
-    
+
     this.minResult = 0;
     this.maxResult = 0;
     this.avgResult = 0;
@@ -92,8 +96,9 @@
     pieces = droll.parse(formula);
     if (!pieces) { return false; }
 
+    var distribution = Random.integer(1, pieces.numSides);
     for (var a=0; a<pieces.numDice; a++) {
-      result.rolls[a] = (1 + Math.floor(Math.random() * pieces.numSides));
+        result.rolls[a] = distribution(engine);
     }
 
     result.modifier = pieces.modifier;
