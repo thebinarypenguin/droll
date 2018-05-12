@@ -3,8 +3,8 @@
    "use strict";
 
   var droll = {};
-  let Random = require("random-js");
-  let engine = Random.engines.mt19937().autoSeed();
+  var Random = require("random-js");
+  var engine = Random.engines.mt19937().autoSeed();
 
 
 
@@ -96,7 +96,7 @@
     pieces = droll.parse(formula);
     if (!pieces) { return false; }
 
-    let distribution = Random.integer(1, pieces.numSides);
+    var distribution = Random.integer(1, pieces.numSides);
     for (var a=0; a<pieces.numDice; a++) {
         result.rolls[a] = distribution(engine);
     }
