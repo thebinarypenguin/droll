@@ -23,14 +23,14 @@
                         "test" : "grunt --verbose"
                       },
   "devDependencies" : {
-                        "mocha"                : "1.14.x",
-                        "should"               : "2.1.x",
-                        "grunt"                : "0.4.x",
-                        "grunt-contrib-jshint" : "0.7.x",
-                        "grunt-contrib-uglify" : "0.2.x",
-                        "grunt-mocha-cli"      : "1.4.x",
-                        "grunt-bump"           : "0.0.x",
-                        "grunt-shell"          : "0.6.x"
+                        "mocha"                : "~6.1.4",
+                        "should"               : "~13.2.3",
+                        "grunt"                : "~1.0.4",
+                        "grunt-contrib-jshint" : "~2.1.0",
+                        "grunt-contrib-uglify" : "~4.0.1",
+                        "grunt-mocha-cli"      : "~4.0.0",
+                        "grunt-bump"           : "~0.8.0",
+                        "grunt-shell"          : "~3.0.1"
                       },
           "engines" : {
                         "node" : ">=0.8.0"
