@@ -6,7 +6,7 @@ and browser environments.
 
 An optional executable is also included in the package for use directly from the command line.
 
-[![Build Status](https://travis-ci.org/thebinarypenguin/droll.svg?branch=master)](https://travis-ci.org/thebinarypenguin/droll)
+[![Build Status](https://travis-ci.org/thebinarypenguin/droll.svg?branch=master)](https://travis-ci.org/thebinarypenguin/droll) [![Greenkeeper badge](https://badges.greenkeeper.io/thebinarypenguin/droll.svg)](https://greenkeeper.io/)
 
 # Installation
 
