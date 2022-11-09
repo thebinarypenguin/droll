@@ -9,7 +9,7 @@
     this.numDice   = 0;
     this.numSides  = 0;
     this.modifier  = 0;
-    
+
     this.minResult = 0;
     this.maxResult = 0;
     this.avgResult = 0;
@@ -26,26 +26,33 @@
    * Returns a string representation of the roll result
    */
   DrollResult.prototype.toString = function() {
+
+    // one die, no modifier
     if (this.rolls.length === 1 && this.modifier === 0) {
       return this.rolls[0] + '';
     }
 
+    // multiple die, no modifier
     if (this.rolls.length > 1 && this.modifier === 0) {
       return this.rolls.join(' + ') + ' = ' + this.total;
     }
 
+    // one die, has positive modifier
     if (this.rolls.length === 1 && this.modifier > 0) {
       return this.rolls[0] + ' + ' + this.modifier + ' = ' + this.total;
     }
 
+    // multiple dice, has positive modifier
     if (this.rolls.length > 1 && this.modifier > 0) {
       return this.rolls.join(' + ') + ' + ' + this.modifier + ' = ' + this.total;
     }
 
+    // one die, has negative modifier
     if (this.rolls.length === 1 && this.modifier < 0) {
       return this.rolls[0] + ' - ' + Math.abs(this.modifier) + ' = ' + this.total;
     }
 
+    // multiple dice, has negative modifier
     if (this.rolls.length > 1 && this.modifier < 0) {
       return this.rolls.join(' + ') + ' - ' + Math.abs(this.modifier) + ' = ' + this.total;
     }
@@ -53,7 +60,7 @@
 
   /**
    * Parse the formula into its component pieces.
-   * Returns a DrollFormula object on success or false on failure.
+   * Returns a 'DrollFormula' object on success or 'false' on failure.
    */
   droll.parse = function(formula) {
     var pieces = null;
@@ -75,7 +82,8 @@
 
   /**
    * Test the validity of the formula.
-   * Returns true on success or false on failure.
+   * Returns 'true' on success or 'false' on failure.
+   * ex: '1d20+1' is valid. '220d-1' is not valid
    */
   droll.validate = function(formula) {
     return (droll.parse(formula)) ? true : false ;
@@ -83,7 +91,7 @@
 
   /**
    * Roll the dice defined by the formula.
-   * Returns a DrollResult object on success or false on failure.
+   * Returns a 'DrollResult' object on success or 'false' on failure.
    */
   droll.roll = function(formula) {
     var pieces = null;
